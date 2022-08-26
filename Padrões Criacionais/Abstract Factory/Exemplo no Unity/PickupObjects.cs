@@ -23,7 +23,7 @@ public class PickupObjects : Interactable
          //gameObject.GetComponent<Rigidbody>().AddForce(gameObject.transform.position-transform.forward,ForceMode.Impulse);
     }
     //Ao parar de interagir com o objeto "soltar" ele
-    public override void OffInteract()
+    public override void StopInteract()
     {
         
         gameObject.transform.parent=null;
