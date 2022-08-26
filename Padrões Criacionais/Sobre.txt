@@ -1,0 +1,8 @@
+Os padrões criacionais, tratam a criação de objetos e suas referencias. Alem de aumentar
+a flexibilidade e sua reutilização.
+Tendo como principais padrões:
+-Abstract Factory
+-Builder
+-Factory Method
+-Prototype
+-Singleton
