@@ -17,23 +17,19 @@ public class PickupObjects : Interactable
         gameObject.GetComponent<Rigidbody>().drag=10;
         if(Input.GetKey(KeyCode.Mouse0))
             Thrown();
-         //gameObject.GetComponent<Rigidbody>().AddForce(gameObject.transform.position-transform.forward,ForceMode.Impulse);
     }
     //Ao parar de interagir com o objeto "soltar" ele
     public override void StopInteract(){
         gameObject.transform.parent=null;
         gameObject.GetComponent<Rigidbody>().useGravity=true;
         gameObject.GetComponent<Rigidbody>().drag=1;
-        //gameObject.GetComponent<Rigidbody>().AddExplosionForce(500f,parent.transform.forward,4f);
     }
     //Ao para de olhar para o objeto cancelar a interação e remover imagem de interação
     public override void OnLoseFocus(){
         gameObject.transform.parent=null;
         gameObject.GetComponent<Rigidbody>().useGravity=true;
         gameObject.GetComponent<Rigidbody>().drag=1;
-         //print("Interagiu com "+gameObject.name);
          image.gameObject.SetActive(false);
-         gameObject.GetComponent<Rigidbody>().AddExplosionForce(5f,parent.transform.forward,40f,0,ForceMode.Acceleration);
     }
     private void Thrown(){
         gameObject.transform.parent=null;
